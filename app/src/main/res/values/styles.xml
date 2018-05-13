@@ -6,6 +6,84 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!--Instruction Layout Styles-->
+    <style name="InstructionLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--Question Layout Styles-->
+    <style name="QuestionLayoutStyle">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingLeft">8dp</item>
+    <item name="android:layout_marginTop">20dp</item>
+    <item name="android:layout_marginBottom">16dp</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+    <!--Question Layout 2 Styles-->
+    <style name="QuestionLayout2Style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <!--Answers Layout Styles-->
+    <style name="AnswersLayoutStyle">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingLeft">10dp</item>
+</style>
+
+    <!--Edit Text Answers Layout Styles-->
+    <style name="EditTextAnswersLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:hint">@string/answer</item>
+    </style>
+
+    <!--Button Layout Styles-->
+    <style name="ButtonLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--Score Layout Styles-->
+    <style name="ScoreLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--Standard Layout Styles-->
+    <style name="StandardLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 </resources>
