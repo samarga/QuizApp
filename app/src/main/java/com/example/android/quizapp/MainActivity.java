@@ -2,11 +2,15 @@ package com.example.android.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.widget.Toast.LENGTH_LONG;
 
 // QUESTION: What's the best way to organize functions?
 
@@ -104,7 +108,8 @@ public class MainActivity extends AppCompatActivity {
 
         // displayMessage("You answered " + score + " out of " + numQuestions + " questions correctly.");
         //new Integer(score).toString()
-        displayMessage(getString(R.string.youAnswered) + score + getString(R.string.outOf) + numQuestions + getString(R.string.questionsCorrectly));
+       // displayMessage(getString(R.string.youAnswered) + score + getString(R.string.outOf) + numQuestions + getString(R.string.questionsCorrectly));
+        Toast.makeText(getApplicationContext(), (getString(R.string.youAnswered) + score + getString(R.string.outOf) + numQuestions + getString(R.string.questionsCorrectly)), LENGTH_LONG).show();
 
     }
 
