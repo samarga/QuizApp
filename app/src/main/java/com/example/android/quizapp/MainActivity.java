@@ -2,11 +2,11 @@ package com.example.android.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_LONG;
@@ -49,15 +49,14 @@ public class MainActivity extends AppCompatActivity {
         CheckBox q5c = findViewById(R.id.q5_CheckBox3);
         boolean q5chk3 = q5c.isChecked();
 
-        scoreMessage(quizGrade(q1.isChecked(), q2.isChecked(), q3, q4, q5chk1, q5chk2, q5chk3));
-
+        if ((q1.isChecked() == q2.isChecked() == q5chk1 == q5chk2 == q5chk3 == false) && (q3.isEmpty() == q4.isEmpty())){
+            scoreMessage(-1);
+        } else
+            scoreMessage(quizGrade(q1.isChecked(), q2.isChecked(), q3, q4, q5chk1, q5chk2, q5chk3));
+        
     }
 
-    /**
-     * Calculates number of correct answers
-     * <p>
-     * QUESTION: Is there any way to consolidate these IF statments since they are all performing the same numCorrect++ call?
-     */
+    // Calculates number of correct answers
     private int quizGrade(Boolean q1Ans, Boolean q2Ans, String q3Ans, String q4Ans, Boolean q5aAns, Boolean q5bAns, Boolean q5cAns) {
         int numCorrect = 0;
 
@@ -84,12 +83,11 @@ public class MainActivity extends AppCompatActivity {
         return (numCorrect);
     }
 
-    /*
-     *   Create score Message
-     *
-     *   QUESTION: Is there a better way to display this text below?
-     */
+    // Create score Message
     private void scoreMessage(int score) {
+        if (score == -1){
+            Toast.makeText(getApplicationContext(), (getString(R.string.noAnswersEntered)), LENGTH_LONG).show();
+        } else
         Toast.makeText(getApplicationContext(), (getString(R.string.youAnswered) + score + getString(R.string.outOf) + NUM_QUESTIONS + getString(R.string.questionsCorrectly)), LENGTH_LONG).show();
     }
 
