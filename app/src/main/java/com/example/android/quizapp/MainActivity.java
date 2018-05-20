@@ -6,17 +6,52 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_LONG;
-
-// QUESTION: What's the best way to organize functions?
 
 public class MainActivity extends AppCompatActivity {
 
     //Number of questions in Quiz
     private static final int NUM_QUESTIONS = 5;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    // This method is called when the submit answers button is clicked.
+    public void submitAnswers(View view) {
+
+        //Question 1 get selected radio button from radioGroup
+        RadioButton q1 = findViewById(R.id.q1_answer3);
+
+        //Question 2 get selected radio button from radioGroup
+        RadioButton q2 = findViewById(R.id.q2_answer1);
+
+        //Question 3 Get text answer
+        EditText q3Answer = findViewById(R.id.q3);
+        String q3 = q3Answer.getText().toString().toUpperCase();
+
+        //Question 4 Get text answer
+        EditText q4Answer = findViewById(R.id.q4);
+        String q4 = q4Answer.getText().toString().toUpperCase();
+
+        //Question 5 get selected check boxes
+        CheckBox q5a = findViewById(R.id.q5_CheckBox1);
+        boolean q5chk1 = q5a.isChecked();
+
+        CheckBox q5b = findViewById(R.id.q5_CheckBox2);
+        boolean q5chk2 = q5b.isChecked();
+
+        CheckBox q5c = findViewById(R.id.q5_CheckBox3);
+        boolean q5chk3 = q5c.isChecked();
+
+        scoreMessage(quizGrade(q1.isChecked(), q2.isChecked(), q3, q4, q5chk1, q5chk2, q5chk3));
+
+    }
 
     /**
      * Calculates number of correct answers
@@ -49,47 +84,6 @@ public class MainActivity extends AppCompatActivity {
         return (numCorrect);
     }
 
-    /**
-     * This method is called when the submit answers button is clicked.
-     * <p>
-     * To collect the boolean state of specific radio buttons and
-     * check boxes that are the correct answers as well as text entered.
-     */
-    public void submitAnswers(View view) {
-
-        //Question 1
-        // get selected radio button from radioGroup
-        RadioButton q1 = (RadioButton) findViewById(R.id.q1answer3);
-
-        //Question 2
-        // get selected radio button from radioGroup
-        RadioButton q2 = (RadioButton) findViewById(R.id.q2answer1);
-
-        //Question 3
-        //Get text answer
-        EditText q3Answer = (EditText) findViewById(R.id.q3);
-        String q3 = q3Answer.getText().toString().toUpperCase();
-
-        //Question 4
-        //Get text answer
-        EditText q4Answer = (EditText) findViewById(R.id.q4);
-        String q4 = q4Answer.getText().toString().toUpperCase();
-
-        //Question 5
-        // get selected check boxes
-        CheckBox q5a = (CheckBox) findViewById(R.id.q5chk1);
-        boolean q5chk1 = q5a.isChecked();
-
-        CheckBox q5b = (CheckBox) findViewById(R.id.q5chk2);
-        boolean q5chk2 = q5b.isChecked();
-
-        CheckBox q5c = (CheckBox) findViewById(R.id.q5chk3);
-        boolean q5chk3 = q5c.isChecked();
-
-        scoreMessage(quizGrade(q1.isChecked(), q2.isChecked(), q3, q4, q5chk1, q5chk2, q5chk3));
-
-    }
-
     /*
      *   Create score Message
      *
@@ -98,12 +92,5 @@ public class MainActivity extends AppCompatActivity {
     private void scoreMessage(int score) {
         Toast.makeText(getApplicationContext(), (getString(R.string.youAnswered) + score + getString(R.string.outOf) + NUM_QUESTIONS + getString(R.string.questionsCorrectly)), LENGTH_LONG).show();
     }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
 
 }

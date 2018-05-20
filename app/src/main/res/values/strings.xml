@@ -22,4 +22,5 @@
     <string name="youAnswered">You answered\u0020</string>
     <string name="outOf">\u0020out of\u0020</string>
     <string name="questionsCorrectly">\u0020questions correctly.</string>
+    <string name="noAnswersEntered">No answers submitted. Please answer questions.</string>
 </resources>
