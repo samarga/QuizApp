@@ -2,7 +2,6 @@ package com.example.android.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -16,7 +15,8 @@ import static android.widget.Toast.LENGTH_LONG;
 
 public class MainActivity extends AppCompatActivity {
 
-    int numQuestions = 5;
+    //Number of questions in Quiz
+    private static final int NUM_QUESTIONS = 5;
 
     /**
      * Calculates number of correct answers
@@ -90,27 +90,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * This method displays the user's score message on the screen.
-     */
-    private void displayMessage(String message) {
-        TextView scoreSummaryTextView = (TextView) findViewById(R.id.quizScore);
-        scoreSummaryTextView.setText(message);
-    }
-
-
     /*
      *   Create score Message
      *
      *   QUESTION: Is there a better way to display this text below?
      */
     private void scoreMessage(int score) {
-
-        // displayMessage("You answered " + score + " out of " + numQuestions + " questions correctly.");
-        //new Integer(score).toString()
-       // displayMessage(getString(R.string.youAnswered) + score + getString(R.string.outOf) + numQuestions + getString(R.string.questionsCorrectly));
-        Toast.makeText(getApplicationContext(), (getString(R.string.youAnswered) + score + getString(R.string.outOf) + numQuestions + getString(R.string.questionsCorrectly)), LENGTH_LONG).show();
-
+        Toast.makeText(getApplicationContext(), (getString(R.string.youAnswered) + score + getString(R.string.outOf) + NUM_QUESTIONS + getString(R.string.questionsCorrectly)), LENGTH_LONG).show();
     }
 
     @Override

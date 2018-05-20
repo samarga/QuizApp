@@ -3,7 +3,8 @@
         android:id="@+id/ScrollView01"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:configChanges="orientation">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,11 +113,6 @@
                     style="@style/ButtonLayoutStyle"
                     android:onClick="submitAnswers"
                     android:text="@string/submitButton"/>
-
-
-            <TextView
-                android:id="@+id/quizScore"
-                style="@style/ScoreLayoutStyle"/>
 
             </LinearLayout>
         </LinearLayout>
