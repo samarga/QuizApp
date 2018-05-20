@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             scoreMessage(-1);
         } else
             scoreMessage(quizGrade(q1.isChecked(), q2.isChecked(), q3, q4, q5chk1, q5chk2, q5chk3));
-        
+
     }
 
     // Calculates number of correct answers

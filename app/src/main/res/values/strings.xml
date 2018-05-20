@@ -2,19 +2,19 @@
     <string name="app_name">Quiz App</string>
     <string name="instructions">Scroll down to answer questions</string>
     <string name="q1">Question 1:\nWhat positive thing came from the golden arches?</string>
-    <string name="q1answer1">A Chicken McNugget shaped like the Virgin Mary has been doing real miracles in Elkhart, Indiana.</string>
-    <string name="q1answer2">A Big Mac might make you mayor of the town of Culver, Idaho.</string>
-    <string name="q1answer3">McDonald\'s french fry oil might be the long sought cure for baldness.</string>
+    <string name="q1answer1">A Chicken McNugget shaped like the Virgin Mary has been doing miracles in Elkhart, Indiana.</string>
+    <string name="q1answer2">A Big Mac may make you mayor of the town of Culver, Idaho.</string>
+    <string name="q1answer3">McDonald\'s french fry oil may be the long sought cure for baldness.</string>
     <string name="q2">Question 2:\nWhat stick actually made the news?</string>
-    <string name="q2answer1">A British water companies was caught using dowsing rods to find water in this modern day and age.</string>
+    <string name="q2answer1">A British water companies was caught using dowsing rods to find water.</string>
     <string name="q2answer2">An exercise program in which people are fetching sticks just like their dogs do.</string>
-    <string name="q2answer3">A man who claims that his stick is, in fact, the very staff of Moses and has convinced people to pay him money to see it.</string>
+    <string name="q2answer3">A man who claims that his stick is the very staff of Moses and has convinced people to pay him money to see it.</string>
     <string name="q3">Question 3:\nFill in the Limerick Blank</string>
     <string name="q3a">On hot days, those poor kids condemn the shade. Street dealers - it\'s time we give them an aid. Let\'s not cause them grief for their cool thirst relief. In Wisconsin we\'ll legalize...</string>
     <string name="answer">Type Answer Here</string>
     <string name="q4">Question 4:\nFill in the Limerick Blank</string>
     <string name="q4a">Resentments I\'d rather not nurse. So some expletives I shall disperse. When I\'m down on my luck, I say bleep, bleep and bleep. Then I\'m happy because I can freely...</string>
-    <string name="q5">Question 5:\nGwyneth Paltrow, gets a lot of headlines for her lifestyle advice. Which of these is something that Gwyneth Paltrow has really told people to do?</string>
+    <string name="q5">Question 5:\nGwyneth P., gets a lot of headlines for her lifestyle advice. Which of these is something that Gwyneth P. has really told people to do?</string>
     <string name="q5chk1">Be nice to water because it has feelings.</string>
     <string name="q5chk2">Get stung by bees on purpose.</string>
     <string name="q5chk3">Take medical advice from a ghost</string>
@@ -22,5 +22,5 @@
     <string name="youAnswered">You answered\u0020</string>
     <string name="outOf">\u0020out of\u0020</string>
     <string name="questionsCorrectly">\u0020questions correctly.</string>
-    <string name="noAnswersEntered">No answers submitted. Please answer questions.</string>
+    <string name="noAnswersEntered">No answers submitted.\nPlease answer questions.</string>
 </resources>
